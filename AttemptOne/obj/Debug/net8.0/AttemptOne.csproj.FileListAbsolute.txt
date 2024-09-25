@@ -1,0 +1,14 @@
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\bin\Debug\net8.0\AttemptOne.exe
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\bin\Debug\net8.0\AttemptOne.deps.json
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\bin\Debug\net8.0\AttemptOne.runtimeconfig.json
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\bin\Debug\net8.0\AttemptOne.dll
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\bin\Debug\net8.0\AttemptOne.pdb
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\AttemptOne.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\AttemptOne.AssemblyInfoInputs.cache
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\AttemptOne.AssemblyInfo.cs
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\AttemptOne.csproj.CoreCompileInputs.cache
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\AttemptOne.dll
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\refint\AttemptOne.dll
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\AttemptOne.pdb
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\AttemptOne.genruntimeconfig.cache
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\ref\AttemptOne.dll
