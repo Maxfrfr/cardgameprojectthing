@@ -3,29 +3,107 @@ using KaimiraGames;
 using Microsoft.VisualBasic;
 
 
+
+
 //player placeholder stuff
 int playerHealth = 20;
 int playerMaxHealth = 20;
 int playerLevel = 1;
 int playerExperience = 0;
+int playerX = 4;
+int playerY = 15;
+
+// room dimensions
+int roomWidth = 30;
+int roomHeight = 10;
+
 List<string> playerInventory = new();
 playerInventory.Add("Common Strike");
 playerInventory.Add("Common Strike");
 playerInventory.Add("Common Strike");
 int p = 0;
-foreach(String k in playerInventory)
+
+bool isGameOver = false;
+
+while (!isGameOver)
 {
-    Console.Write("{0}: ", p);
-    Console.WriteLine(k);
-    p++;
+    // Game logic for when i like. do anything.
+
+
+    // health check
+    if (playerHealth <= 0)
+    {
+        Console.WriteLine("Game over!");
+        isGameOver = true;
+    }
+
+    // updating le ui although there's really no user interface since its a console app.....
+    Console.Clear();
+    drawUI(playerExperience, playerLevel, playerHealth, playerInventory, playerX, playerY, roomHeight, roomWidth);
+     Console.WriteLine("\n\n");
+     Thread.Sleep(1000);
 }
-        Console.WriteLine(" ");
-string text = "   Hello World"; // Testing Purposes
 
-drawCard(text);
+static void drawUI(int playerExperience, int playerLevel, int playerHealth, List<string> playerInventory, int playerY, int playerX, int roomHeight, int roomWidth)
+{
+    if (playerX < 0 || playerX >= roomWidth || playerY < 0 || playerY >= roomHeight)
+    {
+        Console.WriteLine("Invalid player position!");
+        return;
+    }
+
+    // stats
+    Console.WriteLine("Player Health: " + playerHealth);
+    Console.WriteLine("Player Level: " + playerLevel);
+    Console.WriteLine("Player Experience: " + playerExperience);
+    Console.WriteLine("Current Inventory:");
+    foreach (string item in playerInventory)
+    {
+        Console.WriteLine(item);
+    }
 
 
-//Generating Cards
+// array to represent room
+char[,] room = new char[roomWidth, roomWidth];
+
+// initalizing
+for (int i = 0; i < roomHeight; i++)
+{
+    for (int j = 0; j < roomWidth; j++)
+    {
+        room[i, j] = ' ';
+    }
+}
+
+// room borders
+for (int i = 0; i < roomWidth; i++)
+{
+    room[0, i] = '-';
+    room[roomHeight - 1, i] = '-';
+}
+for (int i = 1; i < roomHeight - 1; i++)
+{
+    room[i, 0] = '|';
+    room[i, roomWidth - 1] = '|';
+}
+
+// player pos
+room[playerY, playerX] = '*';
+
+// the actual room
+for (int i = 0; i < roomHeight; i++)
+{
+    for (int j = 0; j < roomWidth; j++)
+    {
+        Console.Write(room[i, j]);
+    }
+    Console.WriteLine();
+}
+}
+
+
+
+//Card Gen
 var rand = new Random();
 generateStrikeCard(playerLevel, playerInventory);
 
@@ -78,23 +156,17 @@ generateStrikeCard(playerLevel, playerInventory);
     }
 
     String rolledStrikeRarity = myWL.Next();
-    Console.WriteLine(rolledStrikeRarity);
-    if(rolledStrikeRarity == "Common")
-    {
-        Console.WriteLine("You obtained a Common Strike");
-        playerInventory.Add("Common Strike");
-        Console.Write("Current Inventory:  \n");
-        foreach(String k in playerInventory)
+    Console.WriteLine("You obtained a " + rolledStrikeRarity + " strike card!");
+    playerInventory.Add(rolledStrikeRarity + " Strike");
+    drawCard(   rolledStrikeRarity + " Strike");
+    Console.Write("Current Inventory:  \n");
+    foreach(String k in playerInventory)
         {
             Console.WriteLine(k);
         }
-                Console.WriteLine(" ");
-
-            }
+              Console.WriteLine(" ");
+     }
     
-
-}
-
 
 
 

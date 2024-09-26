@@ -12,3 +12,4 @@ C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\refint\Att
 C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\AttemptOne.pdb
 C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\AttemptOne.genruntimeconfig.cache
 C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\ref\AttemptOne.dll
+C:\Users\maxis\OneDrive\Desktop\vscode c#\AttemptOne\obj\Debug\net8.0\AttemptOne.sourcelink.json
