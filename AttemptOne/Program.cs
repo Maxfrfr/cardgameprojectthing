@@ -25,10 +25,25 @@ int p = 0;
 
 bool isGameOver = false;
 
-while (!isGameOver)
+while (!isGameOver) // Main game loop
 {
     // Game logic for when i like. do anything.
-
+    if(Console.ReadKey().Key == ConsoleKey.W)
+    {
+        playerX-= 1;
+    }
+    else if(Console.ReadKey().Key == ConsoleKey.S)
+    {
+        playerX+= 1;
+    }
+    else if(Console.ReadKey().Key == ConsoleKey.A)
+    {
+        playerY-= 1;
+    }
+    else if(Console.ReadKey().Key == ConsoleKey.D)
+    {
+        playerY+= 1;
+    }
 
     // health check
     if (playerHealth <= 0)
@@ -38,10 +53,10 @@ while (!isGameOver)
     }
 
     // updating le ui although there's really no user interface since its a console app.....
-    Console.Clear();
-    drawUI(playerExperience, playerLevel, playerHealth, playerInventory, playerX, playerY, roomHeight, roomWidth);
+     Console.Clear();
+     drawUI(playerExperience, playerLevel, playerHealth, playerInventory, playerX, playerY, roomHeight, roomWidth);
      Console.WriteLine("\n\n");
-     Thread.Sleep(1000);
+
 }
 
 static void drawUI(int playerExperience, int playerLevel, int playerHealth, List<string> playerInventory, int playerY, int playerX, int roomHeight, int roomWidth)
@@ -61,6 +76,7 @@ static void drawUI(int playerExperience, int playerLevel, int playerHealth, List
     {
         Console.WriteLine(item);
     }
+
 
 
 // array to represent room
